@@ -1,0 +1,17 @@
+body{margin:0;padding:0;font-family:sans-serif;background:url('https://images.unsplash.com/photo-1580894908361-3b0cbadf5125?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;background-size:cover;}
+.container{display:flex;height:100vh;}
+
+/* Left panel */
+.left-panel{width:220px;background:rgba(255,255,255,0.95);padding:10px;border-right:1px solid #ccc;overflow-y:auto;}
+.left-panel h2{margin-top:0;}
+
+/* Right panel */
+.chat-panel{flex:1;display:flex;flex-direction:column;padding:10px;background:rgba(255,255,255,0.9);}
+.messages{flex:1;overflow-y:auto;padding:5px;border-radius:10px;background:#fefefe;margin-bottom:5px;}
+.message-bubble{padding:6px 12px;margin:5px 0;border-radius:15px;opacity:0;animation:fadeIn 0.5s forwards;}
+.incoming{background:#e1ffc7;align-self:flex-start;}
+.outgoing{background:#dcf8c6;align-self:flex-end;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:translateY(0);}}
+input{margin-top:5px;padding:8px;border-radius:10px;border:1px solid #ccc;width:100%;box-sizing:border-box;}
+button{margin-top:5px;padding:8px;border-radius:10px;background:#25d366;color:white;border:none;cursor:pointer;transition:0.3s;}
+button:hover{transform:scale(1.05);}

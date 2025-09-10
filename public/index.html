@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>StudyHub WhatsApp</title>
+<link rel="stylesheet" href="style.css">
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Left panel: Classes / Chat list -->
+  <div class="left-panel">
+    <h2>StudyHub</h2>
+    <select id="classSelect">
+      <option value="11">Class 11</option>
+      <option value="12">Class 12</option>
+    </select>
+    <div id="notesList"></div>
+  </div>
+
+  <!-- Right panel: Chat -->
+  <div class="chat-panel">
+    <div id="messages" class="messages"></div>
+    <input id="nameInput" placeholder="Enter your name">
+    <input id="chatInput" placeholder="Type a message">
+    <button onclick="sendMessage()">Send</button>
+    <input type="file" id="fileInput" style="display:none" accept="image/*,video/*">
+    <button onclick="document.getElementById('fileInput').click()">📷 Send Photo/Video</button>
+    <button onclick="startVoiceChat()">🎤 Voice Chat</button>
+  </div>
+
+</div>
+
+</body>
+</html>
